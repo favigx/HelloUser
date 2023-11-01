@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="memberlistStyle.css">
+    <script src="start.js" defer></script>
+</head>
+<body>
+    <p><a href="/members">Medlemmar</a><a href="/">Hem</a><a id="lank" href="/login">Logga in</a></p>
+    
+    <div class="header">
+        
+        <div class="text">
+        <h1 id="text">Medlemmar</h1>
+        <h3>Nedan kan du se alla våra medlemmar <h3>
+       
+
+    </div>
+    </div>
+    <div class="members">
+        <ul class="remove">
+            <li class="List" th:id="${member.id}" th:each="member : ${members}"><br/>
+                <a th:href="@{/member/{memberName}(memberName=${member.name})}"><br/>
+                    <span th:text="${member.name}"></span>
+                
+                <button id="removeBtn"><a th:href = "@{/remove-member/{memberId}(memberId=${member.id})}" >Ta bort</a></button>
+            </li>
+        </ul>
+
+    </div>
+    
+    
+</body>
+</html>
+

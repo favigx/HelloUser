@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    background-color: rgb(195, 223, 210);
+}
+
+.header{
+    font-family:monospace;
+    font-size: 20px;
+    color:aliceblue;
+    
+    background-color: rgb(156, 185, 176);
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-image: url("backgrounddesign.jpg") 
+}
+
+.text{
+    margin-left:auto;
+    margin-right: auto;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    
+    
+
+}
+
+p{
+    margin-left:auto;
+    margin-right: auto;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    
+
+}
+
+.members{
+    margin-left:auto;
+    margin-right: auto;
+    padding-left: 42px;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight:bold;
+    background-color: rgb(180, 211, 195);
+  
+    color:black;
+
+}
+
+.addmember{
+    margin-left:auto;
+    margin-right: auto;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    font-weight:bold;
+    background-color: rgb(180, 211, 195);
+  
+    color:black;
+
+}

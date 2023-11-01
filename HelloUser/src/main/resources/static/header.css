@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    background-color: rgb(162, 201, 183);
+}
+
+a{
+    margin-right: 30px; 
+ }
+
+p{
+    margin-right: 30px; 
+    font-family:monospace;
+    font-size: 17px;
+    font-weight: bold;
+    color:black;
+    text-align: right;
+ }
+ a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}

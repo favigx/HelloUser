@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    background-color: rgb(162, 201, 183);
+}
+
+.Home{
+
+    margin-left:auto;
+    margin-right: auto;
+    
+    font-family:monospace;
+    font-size: 17px;
+    font-weight: bold;
+    color:aliceblue;
+    padding-left: 150rem;
+}
+
+a{
+    margin-right: 30px; 
+  
+    
+    
+ }
+
+ p{
+    margin-right: 30px; 
+    font-family:monospace;
+    font-size: 17px;
+    font-weight: bold;
+    color:black;
+    text-align: right;
+ }

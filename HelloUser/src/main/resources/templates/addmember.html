@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Member</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="design.css">
+    <script src="script.js" defer></script>
+    <script src="start.js" defer></script>
+    
+</head>
+<body>
+        <p><a href="/members">Medlemmar</a><a href="/">Hem</a><a id="lank" href="/login">Logga in</a></p>
+
+        <div class="header">
+        
+            <div class="text">
+            <h1>Lägg till medlem</h1>
+            <h3>Fyll i formuläret för att lägga till en ny medlem<h3>
+           
+    
+        </div>
+        </div>
+    
+   
+    
+    <div class="addmember">
+        <form id="add" method="post" th:action="@{/addperson}" th:object="${newMember}">
+            
+            Namn:</br/>
+            <input type="text" th:field="*{name}" required><br/><br/>
+            Ålder:</br/>
+            <input type="text" th:field="*{age}" required><br/><br/>
+            Mail:</br/>
+            <input type="text" th:field="*{email}" required><br/><br/>
+            <input id="Btn" type="submit">
+        </form>
+        
+
+        
+    </div>
+    
+    
+</body>
+</html>
