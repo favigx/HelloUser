@@ -7,20 +7,19 @@
     <link rel="stylesheet" href="/header.css">
     <link rel="stylesheet" href="/design.css">
     <link rel="stylesheet" href="/informationStyle.css">
-    <script src="/start.js" defer></script>
+    <script src="/loginScript.js" defer></script>
+    <script src="/localStorageScript.js" defer></script>
 </head>
 <body>
-    <p><a id="addmemberLink" href="/addmember">Lägg till medlem</a><a href="/members">Medlemmar</a><a href="/">Hem</a><a id="lank" href="/login">Logga in</a></p>
+    <p class="links"><a id="addmemberLink" href="/addmember">Lägg till medlem</a><a id="membersLink" href="/members">Medlemmar</a><a id="homeLink" href="/">Hem</a><a id="loginLink" href="/login">Logga in</a></p>
     
     <div class="header">
-        
         <div class="text">
             <h1>Information om <span th:text="${member.name}"></span></h1>
-            <h3>Nedan kan du se information<h3>
-       
+            <h3>Nedan kan du se information</h3>
+        </div>
+    </div>
 
-    </div>
-    </div>
     <div class="info">
         Namn: <span th:text="${member.name}"></span><br/><br/>
         Ålder: <span th:text="${member.age}"></span><br/><br/>

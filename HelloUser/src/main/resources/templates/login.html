@@ -8,25 +8,23 @@
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="design.css">
     <script src="loginScript.js" defer></script>
-    <script src="start.js" defer></script>
+    <script src="localStorageScript.js" defer></script>
     
 </head>
 <body>
-    <p><a id="addmemberLink" href="/addmember">Lägg till medlem</a><a href="/members">Medlemmar</a><a href="/">Hem</a><a id="lank" href="/login">Logga in</a></p>
+    <p class="links"><a id="addmemberLink" href="/addmember">Lägg till medlem</a><a id="membersLink" href="/members">Medlemmar</a><a id="homeLink" href="/">Hem</a><a id="loginLink" href="/login">Logga in</a></p>
 
     <div class="header">
-    
         <div class="text">
-        <h1>Logga in</h1>
-        <h3>Fyll i formuläret för att lägga till en ny medlem<h3>
-       
+            <h1>Logga in</h1>
+            <h3>Logga in som admin</h3>
+        </div>
+    </div>
 
-    </div>
-    </div>
     <div class="box">
 
          Användarnamn<br/><br/>
-         <input id="userr" type="användarnamn" required><br/><br/>
+         <input id="User" type="användarnamn" required><br/><br/>
          Password <br/><br/>
          <input id="password" type="password" required><br/><br/>
          <button id="loginBtn" type="submit">Logga in</button>

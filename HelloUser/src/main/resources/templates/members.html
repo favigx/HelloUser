@@ -7,33 +7,27 @@
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="design.css">
     <link rel="stylesheet" href="memberlistStyle.css">
-    <script src="start.js" defer></script>
+    <script src="loginScript.js" defer></script>
+    <script src="localStorageScript.js" defer></script>
 </head>
 <body>
-    <p><a id="addmemberLink" href="/addmember">Lägg till medlem</a><a href="/members">Medlemmar</a><a href="/">Hem</a><a id="lank" href="/login">Logga in</a></p>
+    <p class="links"><a id="addmemberLink" href="/addmember">Lägg till medlem</a><a id="membersLink" href="/members">Medlemmar</a><a id="homeLink" href="/">Hem</a><a id="loginLink" href="/login">Logga in</a></p>
     
     <div class="header">
-        
         <div class="text">
-        <h1 id="text">Medlemmar</h1>
-        <h3>Nedan kan du se alla våra medlemmar <h3>
-       
+            <h1>Medlemmar</h1>
+            <h3>Nedan kan du se alla våra medlemmar</h3>
+        </div>
+    </div>
 
-    </div>
-    </div>
     <div class="members">
         <ul class="remove">
             <li class="List" th:id="${member.id}" th:each="member : ${members}"><br/>
                 <a th:href="@{/member/{memberName}(memberName=${member.name})}"><br/>
-                    <span th:text="${member.name}"></span>
-                
-                <button id="removeBtn"><a th:href = "@{/remove-member/{memberId}(memberId=${member.id})}" >Ta bort</a></button>
+                     <span th:text="${member.name}"></span>
+                     <a th:href = "@{/remove-member/{memberId}(memberId=${member.id})}" ><button  id="removeBtn">Ta bort</button>
             </li>
         </ul>
-
     </div>
-    
-    
 </body>
 </html>
-

@@ -7,24 +7,20 @@
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="design.css">
     <script src="script.js" defer></script>
-    <script src="start.js" defer></script>
+    <script src="loginScript.js" defer></script>
+    <script src="localStorageScript.js" defer></script>
     
 </head>
 <body>
-    <p><a id="addmemberLink" href="/addmember">Lägg till medlem</a><a href="/members">Medlemmar</a><a href="/">Hem</a><a id="lank" href="/login">Logga in</a></p>
+    <p class="links"><a id="addmemberLink" href="/addmember">Lägg till medlem</a><a id="membersLink" href="/members">Medlemmar</a><a id="homeLink" href="/">Hem</a><a id="loginLink" href="/login">Logga in</a></p>
 
-        <div class="header">
-        
-            <div class="text">
-            <h1>Lägg till medlem</h1>
-            <h3>Fyll i formuläret för att lägga till en ny medlem<h3>
-           
-    
+    <div class="header">
+        <div class="text">
+            <h1>Lägg till ny medlem</h1>
+            <h3>Fyll i formuläret och klicka sedan på lägg till för att lägga till en ny medlem</h3>
         </div>
-        </div>
-    
-   
-    
+    </div>
+
     <div class="addmember">
         <form id="add" method="post" th:action="@{/addperson}" th:object="${newMember}">
             

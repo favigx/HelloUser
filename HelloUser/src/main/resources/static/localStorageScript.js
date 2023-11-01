@@ -1,13 +1,22 @@
 localStorage.getItem("user");
 localStorage.getItem("pass");
 
-let loginLink = document.getElementById("lank");
+let loginLink = document.getElementById("loginLink");
 let List = document.getElementsByClassName("List");
 let addmemberLink = document.getElementById("addmemberLink");
 
 if (localStorage.getItem("user")){
-    
-        loginLink.innerText = "Logga ut";
+    logOut();
+}
+
+if(!localStorage.getItem("user")){
+    hideRemoveBtn();
+    hideAddmemberLink();
+}
+
+function logOut(){
+
+    loginLink.innerText = "Logga ut";
         
         if(loginLink.innerText == "Logga ut"){
 
@@ -20,6 +29,17 @@ if (localStorage.getItem("user")){
         }
 }
 
+function hideRemoveBtn(){
+
+    for (let i = 0; i < List.length; i++) {
+        removeBtn.remove();
+    }
+    
+}
+
+function hideAddmemberLink(){
+    addmemberLink.remove();
+}
 
 // if (localStorage.getItem("user")){
 //     let link = document.createElement("a");
@@ -29,22 +49,3 @@ if (localStorage.getItem("user")){
 //     link.style.fontSize = "17px";
 //     link.style.fontFamily = "monospace"
 // }
-
-
-if(!localStorage.getItem("user")){
-    for (let i = 0; i < List.length; i++) {
-    removeBtn.remove();
-}
-
-
-
-      
-}
-if(!localStorage.getItem("user")){
-   
-    addmemberLink.remove();
-
-
-      
-}
-

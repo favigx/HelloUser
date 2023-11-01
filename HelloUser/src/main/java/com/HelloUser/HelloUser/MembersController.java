@@ -10,12 +10,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-
-
 @Controller
 public class MembersController {
     static final List<Members> members = new ArrayList<>();
-    //public static Members memberss = new Members(null, 0, null, 0);
 
     static {
         members.add(new Members("James", 31, "james.j@gmail.com", 1));
@@ -26,7 +23,6 @@ public class MembersController {
     @GetMapping("/members")
     String getMembers(Model model){
         model.addAttribute("members", members);
-        //model.addAttribute("newMember", new Members(null, 0, null, 0));
         return "members";
     }
 
@@ -48,7 +44,5 @@ public class MembersController {
     String newMember(@RequestParam("name") String name, @RequestParam("age") int age, @RequestParam("email") String email) {
         members.add(new Members(name, age , email, members.size() +1));
         return "redirect:/addmember";
-
-    }
-    
+    } 
 }
