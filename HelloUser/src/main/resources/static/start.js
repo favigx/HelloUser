@@ -3,11 +3,10 @@ localStorage.getItem("pass");
 
 let loginLink = document.getElementById("lank");
 let List = document.getElementsByClassName("List");
+let addmemberLink = document.getElementById("addmemberLink");
 
 if (localStorage.getItem("user")){
-    console.log("LS existerar")
     
-  
         loginLink.innerText = "Logga ut";
         
         if(loginLink.innerText == "Logga ut"){
@@ -22,20 +21,30 @@ if (localStorage.getItem("user")){
 }
 
 
-if (localStorage.getItem("user")){
-    let link = document.createElement("a");
-    link.innerText = "Lägg till medlem"
-    link.href="/addmember"
-    document.body.appendChild(link);
-    link.style.fontSize = "17px";
-    link.style.fontFamily = "monospace"
-}
+// if (localStorage.getItem("user")){
+//     let link = document.createElement("a");
+//     link.innerText = "Lägg till medlem"
+//     link.href="/addmember"
+//     document.body.appendChild(link);
+//     link.style.fontSize = "17px";
+//     link.style.fontFamily = "monospace"
+// }
 
 
 if(!localStorage.getItem("user")){
     for (let i = 0; i < List.length; i++) {
     removeBtn.remove();
 }
+
+
+
+      
+}
+if(!localStorage.getItem("user")){
+   
+    addmemberLink.remove();
+
+
       
 }
 
