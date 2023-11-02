@@ -15,9 +15,9 @@ public class MembersController {
     static final List<Members> members = new ArrayList<>();
 
     static {
-        members.add(new Members("James", 31, "james.j@gmail.com", 1));
-        members.add(new Members("Joey", 39, "joey.j@gmail.com", 2));
-        members.add(new Members("Chandler", 40, "chandler.c@gmail.com", 3));
+        members.add(new Members("Karl", "Karlsson", "karl.karlsson@gmail.com", "Stockholm", 1));
+        members.add(new Members("Mats", "Matsson", "mats.matsson@gmail.com", "Malmö", 2));
+        members.add(new Members("Per", "Persson", "per.persson@gmail.com", "Göteborg", 3));
     }
 
     @GetMapping("/members")
@@ -35,14 +35,25 @@ public class MembersController {
    
     @GetMapping("/addmember")
     String addMember(Model model){
-        //model.addAttribute("members", members);
-        model.addAttribute("newMember", new Members(null, 0, null, 0));
+        model.addAttribute("newMember", new Members(null, null, null, null, 0));
         return "addmember";
     }
 
     @PostMapping("/addperson")
-    String newMember(@RequestParam("name") String name, @RequestParam("age") int age, @RequestParam("email") String email) {
-        members.add(new Members(name, age , email, members.size() +1));
+    String newMember(@RequestParam("fName") String fName, @RequestParam("lName") String lName, @RequestParam("email") String email, @RequestParam("stad") String stad) {
+        members.add(new Members(fName, lName, email, stad, members.size() +1));
         return "redirect:/addmember";
-    } 
+    }
+
+    @GetMapping("/member/{memberName}")
+    String getMember(@PathVariable String memberName, Model model){
+         
+        for (Members member : MembersController.members){
+            if(member.getfName().equals(memberName)) {
+                model.addAttribute("member", new Members(member.getfName(), member.getlName(), member.getEmail(), member.getStad(), member.getId()));
+                return "member";
+            }
+        }
+        return "member";
+    }
 }

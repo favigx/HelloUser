@@ -4,28 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Start</title>
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="design.css">
-    <script src="loginScript.js" defer></script>
-    <script src="localStorageScript.js" defer></script>
-    
+    <link rel="stylesheet" href="headerStyle.css">
+    <link rel="stylesheet" href="designStyle.css">
+    <link rel="stylesheet" href="homeStyle.css">
+
+    <script src="adminScript.js" defer></script> 
 </head>
 <body>
-    <p class="links"><a id="addmemberLink" href="/addmember">Lägg till medlem</a><a id="membersLink" href="/members">Medlemmar</a><a id="homeLink" href="/">Hem</a><a id="loginLink" href="/login">Logga in</a></p>
+    <div>
+        <p id="admincheck">Ej inloggad</p>
+        <p class="links"><a id="addmemberLink" href="/addmember">Lägg till medlem</a>
+            <a id="membersLink" href="/members">Medlemmar</a>
+            <a id="homeLink" href="/">Hem</a><a id="loginLink" href="/login">Logga in</a></p>
+    </div>
     
     <div class="header">
         <div class="text">
-            <h1>Välkommen</h1>
-            <h3>Här är min prototyp för eran medlemssida</h3>
+            <h1 id="text">Välkommen</h1>
+            <h3 id="underText">Här är min prototyp för eran medlemssida</h3>
         </div>
     </div> 
 
+    <div class="box">
     <div class="aboutUs">
         <h2>Om oss</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, dignissimos odit voluptates qui illum autem voluptas maxime recusandae corporis quis amet assumenda doloribus quam? Earum vitae laudantium officiis voluptatibus ab?</p><br/>
-        <p></p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis amet animi magnam explicabo excepturi, illum, perspiciatis iure sit corporis odio eveniet adipisci dignissimos consequatur vitae, necessitatibus nemo maxime velit suscipit?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque magni illo enim quisquam, accusamus necessitatibus, dolorem quidem, ea pariatur ullam obcaecati! Provident, sit unde facere illo dignissimos voluptas nostrum magnam.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. A ratione hic laboriosam esse possimus at reiciendis cumque. Dolores dolore tenetur veritatis labore dicta, culpa, est ad, voluptate repellendus sequi nemo.</p>
+        <p class="txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+            Neque, dignissimos odit voluptates qui illum autem voluptas maxime 
+            recusandae corporis quis amet assumenda doloribus quam? Earum vitae
+            laudantium officiis voluptatibus ab? Lorem, ipsum dolor sit amet 
+            consectetur adipisicing elit. Illo doloribus cum non, dignissimos 
+            libero dolor, asperiores beatae optio laudantium incidunt fugit 
+            pariatur mole stias nihil quam dicta natus tenetur ipsam dolore.Lorem
+            ipsum dolor sit, amet consectetur adipisicingelit. Sint repudiandae 
+            est laudantium. Debitis aliquid voluptatibus similique nostrum iusto 
+            sunt assumenda. Laborum fugiat facere harum officiis tempora, eius
+            molestiae! Debitis, delectus? Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Maiores suscipit repellat magnam, facere asperiores
+            cumque culpa officiis exercitationem recusandae fugiat iure et molestias
+            repellendus laboriosam rem, dolor repudiandae neque totam!</p>
     </div>
+    
+    <div class="whatweDo">
+        <h2>Vad vi gör</h2>
+        <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sint nihil, quam porro harum veniam impedit fugit aperiam consectetur
+            deserunt a recusandae assumenda, maxime sit velit, expedit a doloribus 
+            cumque quis quod. Lorem, ipsum dolor sit amet consectetur adipisicing
+            elit. Eligendi impedit repudiandae, eius quia ab ea tempore? Eum nihil,
+            repellat fugit vero deleniti il Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Impedit molestiae eos cum reprehenderit sunt, omnis
+            assumenda fugit alias tempore porro, aliquid atque. Totam rerum quo 
+            expedita similique harum architecto repudiandae!lo harum autem ipsum,
+            error, magnam iste ducimus?</p>
+    </div>
+    <div class="contact">
+        <h2>Kontakt</h2>
+        <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Deleniti culpa enim quasi amet quaerat ipsum iusto odit. Minima,
+            corrupti ad? Quod nisi labore aperiam praesentium adipisci, incidunt
+            ex qui distinctio. Lorem ipsum dolor, sit amet consectetur adipisicing
+            elit. Ipsa dignissimos voluptatem nesciunt facilis dolorem ullam culpa
+            natus, doloremque iusto laborum in eaque, atque asperiores impedit! 
+            Officiis, id ex. Quos, odio. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Quia excepturi ducimus vel repudiandae beatae quasi 
+            voluptatem, nobis nulla ex obcaecati delectus facere itaque, optio 
+            incidunt praesentium fuga rerum maiores numquam. Lorem ipsum, dolor sit
+            amet consectetur adipisicing elit. Explicabo, doloribus qui. Vitae tempore
+            unde labore id commodi fugit nemo. Vero assumenda sapiente nesciunt possimus 
+            distinctio quae nisi temporibus iste perspiciatis!</p>
+    </div>
+</div>
+
 </body>
 </html>

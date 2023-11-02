@@ -1,0 +1,35 @@
+.txt{ 
+    max-width: 450px;
+    color:white;
+}
+
+.aboutUs{
+    padding-left: 5rem;
+    padding-right: 5rem; 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    font-weight:bold;
+    float: left;
+    color:white;
+}
+
+.whatweDo{
+
+    padding-left: 27rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    font-weight:bold;
+    color:white;
+    float: left;
+}
+
+.contact{
+
+    padding-left: 5rem;
+    padding-right: 5rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    font-weight:bold;
+    color:white;
+    float: right;
+}

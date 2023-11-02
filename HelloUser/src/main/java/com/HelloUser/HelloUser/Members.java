@@ -2,32 +2,34 @@ package com.HelloUser.HelloUser;
 
 public class Members {
 
-    private String name;
-    private int age;
+    private String fName;
+    private String lName;
     private String email;
+    private String stad;
     private int id;
 
-    Members(String name, int age, String email, int id){
-        this.name = name;
-        this.age = age;
+    Members(String fName, String lName, String email, String stad, int id){
+        this.fName = fName;
+        this.lName = lName;
         this.email = email;
+        this.stad = stad;
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getfName() {
+        return fName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setfName(String fName) {
+        this.fName = fName;
     }
 
-    public int getAge() {
-        return age;
+    public String getlName() {
+        return lName;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setlName(String lName) {
+        this.lName = lName;
     }
 
     public String getEmail() {
@@ -36,6 +38,14 @@ public class Members {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+     public String getStad() {
+        return stad;
+    }
+
+    public void setStad(String stad) {
+        this.stad = stad;
     }
 
     public int getId() {

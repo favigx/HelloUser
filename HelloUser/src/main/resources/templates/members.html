@@ -4,28 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Members</title>
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="headerStyle.css">
+    <link rel="stylesheet" href="designStyle.css">
     <link rel="stylesheet" href="memberlistStyle.css">
-    <script src="loginScript.js" defer></script>
-    <script src="localStorageScript.js" defer></script>
+
+    <script src="adminScript.js" defer></script> 
 </head>
 <body>
-    <p class="links"><a id="addmemberLink" href="/addmember">Lägg till medlem</a><a id="membersLink" href="/members">Medlemmar</a><a id="homeLink" href="/">Hem</a><a id="loginLink" href="/login">Logga in</a></p>
+    <div>
+        <p id="admincheck">Ej inloggad</p>
+        <p class="links"><a id="addmemberLink" href="/addmember">Lägg till medlem</a>
+            <a id="membersLink" href="/members">Medlemmar</a>
+            <a id="homeLink" href="/">Hem</a><a id="loginLink" href="/login">Logga in</a></p>
+    </div>
     
     <div class="header">
         <div class="text">
             <h1>Medlemmar</h1>
-            <h3>Nedan kan du se alla våra medlemmar</h3>
+            <h3>Nedan kan du se alla våra medlemmar och se information om en viss medlem genom att trycka på personens namn</h3>
         </div>
     </div>
 
     <div class="members">
         <ul class="remove">
             <li class="List" th:id="${member.id}" th:each="member : ${members}"><br/>
-                <a th:href="@{/member/{memberName}(memberName=${member.name})}"><br/>
-                     <span th:text="${member.name}"></span>
-                     <a th:href = "@{/remove-member/{memberId}(memberId=${member.id})}" ><button  id="removeBtn">Ta bort</button>
+                <a th:href="@{/member/{memberfname}(memberfname=${member.fName})}"><br/>
+                     <span th:text="${member.fName} + ' ' + ${member.lName}"></span>
+                     <div>
+                        <a id="remove" th:href = "@{/remove-member/{memberId}(memberId=${member.id})}">
+                            <button id="removeBtn" onclick="removeAlert()">Ta bort</button>
+                     </div>
+                     
             </li>
         </ul>
     </div>

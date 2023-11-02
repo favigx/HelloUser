@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    background-color: rgb(132, 156, 143);
+}
+
+.header{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+    color:aliceblue;
+    
+    background-color: rgb(156, 185, 176);
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-image: url("backgrounddesign.jpg") 
+}
+
+.text{
+    margin-left:auto;
+    margin-right: auto;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    
+}

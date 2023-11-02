@@ -4,39 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Member</title>
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="design.css">
-    <script src="script.js" defer></script>
-    <script src="loginScript.js" defer></script>
-    <script src="localStorageScript.js" defer></script>
-    
+    <link rel="stylesheet" href="headerStyle.css">
+    <link rel="stylesheet" href="designStyle.css">
+    <link rel="stylesheet" href="addmemberStyle.css">
+
+    <script src="adminScript.js" defer></script> 
 </head>
 <body>
-    <p class="links"><a id="addmemberLink" href="/addmember">Lägg till medlem</a><a id="membersLink" href="/members">Medlemmar</a><a id="homeLink" href="/">Hem</a><a id="loginLink" href="/login">Logga in</a></p>
-
+    <div>
+        <p id="admincheck">Ej inloggad</p>
+        <p class="links"><a id="addmemberLink" href="/addmember">Lägg till medlem</a>
+            <a id="membersLink" href="/members">Medlemmar</a>
+            <a id="homeLink" href="/">Hem</a><a id="loginLink" href="/login">Logga in</a></p>
+    </div>
+    
     <div class="header">
         <div class="text">
-            <h1>Lägg till ny medlem</h1>
-            <h3>Fyll i formuläret och klicka sedan på lägg till för att lägga till en ny medlem</h3>
+            <h1 id="txt">Lägg till ny medlem</h1>
+            <h3 id="txtt">Fyll i formuläret och klicka sedan på lägg till för att lägga till en ny medlem</h3>
         </div>
     </div>
 
     <div class="addmember">
-        <form id="add" method="post" th:action="@{/addperson}" th:object="${newMember}">
-            
-            Namn:</br/>
-            <input type="text" th:field="*{name}" required><br/><br/>
-            Ålder:</br/>
-            <input type="text" th:field="*{age}" required><br/><br/>
-            Mail:</br/>
-            <input type="text" th:field="*{email}" required><br/><br/>
-            <input id="Btn" type="submit">
+        <form id="add" method="post" th:action="@{/addperson}" th:object="${newMember}">  
+            Förnamn:</br/>
+            <input type="text" id="fnameInput" th:field="*{fName}" required><br/><br/>
+            Efternamn:</br/>
+            <input type="text" id="lnameInput" th:field="*{lName}" required><br/><br/>
+            Email:</br/>
+            <input type="text" id="emailInput" th:field="*{email}" required><br/><br/>
+            Stad:</br/>
+            <input type="text" id="cityInput" th:field="*{stad}" required><br/><br/>
+            <button id="addBtn" onclick="addAlert()" type="submit">Lägg till medlem</button>
         </form>
-        
-
-        
     </div>
-    
-    
 </body>
 </html>

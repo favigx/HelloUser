@@ -4,32 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Information</title>
-    <link rel="stylesheet" href="/header.css">
-    <link rel="stylesheet" href="/design.css">
-    <link rel="stylesheet" href="/informationStyle.css">
-    <script src="/loginScript.js" defer></script>
-    <script src="/localStorageScript.js" defer></script>
+    <link rel="stylesheet" href="/headerStyle.css">
+    <link rel="stylesheet" href="/designStyle.css">
+    <link rel="stylesheet" href="/memberInfoStyle.css">
+    
+    <script src="adminScript.js" defer></script> 
 </head>
 <body>
-    <p class="links"><a id="addmemberLink" href="/addmember">Lägg till medlem</a><a id="membersLink" href="/members">Medlemmar</a><a id="homeLink" href="/">Hem</a><a id="loginLink" href="/login">Logga in</a></p>
+    <div>
+        <p id="admincheck">Ej inloggad</p>
+        <p class="links"><a id="addmemberLink" href="/addmember">Lägg till medlem</a>
+            <a id="membersLink" href="/members">Medlemmar</a>
+            <a id="homeLink" href="/">Hem</a><a id="loginLink" href="/login">Logga in</a></p>
+    </div>
     
     <div class="header">
         <div class="text">
-            <h1>Information om <span th:text="${member.name}"></span></h1>
-            <h3>Nedan kan du se information</h3>
+            <h1>Information om <span th:text="${member.fName}"></span>
+            <h3>Se nedan</h3>
         </div>
     </div>
 
     <div class="info">
-        Namn: <span th:text="${member.name}"></span><br/><br/>
-        Ålder: <span th:text="${member.age}"></span><br/><br/>
+        Förnamn: <span th:text="${member.fName}"></span><br/><br/>
+        Efternamn: <span th:text="${member.lName}"></span><br/><br/>
         Email: <span th:text="${member.email}"></span><br/><br/>
-        Id: #<span th:text="${member.id}"></span>
-
-    </div>
-    
-
-    
+        Stad: <span th:text="${member.stad}"></span><br/><br/>
+        Id: #<span th:text="${member.id}"></span><br/><br/>
+        <a id="back" href="/members"><u>Tillbaka till alla medlemmar</u></a>
+    </div>   
 </body>
 </html>
-

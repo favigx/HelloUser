@@ -1,12 +1,12 @@
 .box{
+    background-color: rgb(180, 211, 195);
+    outline: solid 2px rgb(96, 116, 107);
+    
     text-align: center;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 18px;
     font-weight:bold;
-    background-color: rgb(180, 211, 195);
     
-    align-content: center;
-    outline: solid 2px rgb(147, 172, 161);
     position: absolute;
     top: 30%;
     left: 50%;
