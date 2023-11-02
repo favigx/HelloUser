@@ -26,7 +26,7 @@
     </div>
 
     <div class="addmember">
-        <form id="add" method="post" th:action="@{/addperson}" th:object="${newMember}">  
+        <form method="post" th:action="@{/addperson}" th:object="${newMember}">  
             Förnamn:</br/>
             <input type="text" id="fnameInput" th:field="*{fName}" required><br/><br/>
             Efternamn:</br/>

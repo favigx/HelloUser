@@ -17,8 +17,6 @@ let emailInput = document.getElementById("emailInput");
 let cityInput = document.getElementById("cityInput");
 let admincheck = document.getElementById("admincheck");
 
-let txt = document.getElementById("txt");
-
 if (localStorage.getItem("user")){
     logOut();
     changeText();  
@@ -30,7 +28,7 @@ if(!localStorage.getItem("user")){
     
     if(header == header){               // Den här if-satsen är rätt knasig och något jag exprimenterade fram,
         window.location.replace("/");   // Den styr så att inte en icke inloggad admin kan besöka url: /addmember.
-    }                                   // Jag förstår att det måste finnas en simplare väg att ta.
+    }                                   // Jag förstår att det måste finnas en simplare väg att ta. Ska klura!
 }
  
 function logOut(){

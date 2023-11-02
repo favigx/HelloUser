@@ -26,15 +26,14 @@
     </div>
 
     <div class="members">
-        <ul class="remove">
+        <ul>
             <li class="List" th:id="${member.id}" th:each="member : ${members}"><br/>
                 <a th:href="@{/member/{memberfname}(memberfname=${member.fName})}"><br/>
                      <span th:text="${member.fName} + ' ' + ${member.lName}"></span>
                      <div>
-                        <a id="remove" th:href = "@{/remove-member/{memberId}(memberId=${member.id})}">
+                        <a th:href = "@{/remove-member/{memberId}(memberId=${member.id})}">
                             <button id="removeBtn" onclick="removeAlert()">Ta bort</button>
-                     </div>
-                     
+                     </div>       
             </li>
         </ul>
     </div>

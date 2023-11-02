@@ -1,6 +1,17 @@
+#admincheck{
+    margin:0;
+    padding-left: 5rem;
+    
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    font-weight:bold;
+    color:black;
+    float: left;
+}
+
 a{
     margin-right: 30px; 
- }
+}
 
 .links{
     margin-right: 30px; 
@@ -9,7 +20,7 @@ a{
     font-weight: bold;
     color:black;
     text-align: right;
- }
+}
  a:link {
     text-decoration: none;
 }
@@ -29,14 +40,4 @@ a{
 #loginLink{
     border-left: 3px solid black;
     padding-left: 2rem;
-}
-#admincheck{
-    margin:0;
-    padding-left: 5rem;
-    
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 18px;
-    font-weight:bold;
-    color:black;
-    float: left;
 }
