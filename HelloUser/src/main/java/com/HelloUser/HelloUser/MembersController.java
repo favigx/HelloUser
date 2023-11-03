@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class MembersController {
     static final List<Members> members = new ArrayList<>();
 
+    // Mock-data som jag väljer att ha kvar för visa hur det kan se ut
     static {
         members.add(new Members("Karl", "Karlsson", "karl.karlsson@gmail.com", "Stockholm", 1));
         members.add(new Members("Mats", "Matsson", "mats.matsson@gmail.com", "Malmö", 2));
@@ -28,7 +29,6 @@ public class MembersController {
 
     @GetMapping("/remove-member/{memberId}")
     String removeMember(@PathVariable int memberId){
-        System.out.println("RemovePerson " + memberId);
         members.removeIf(member -> member.getId() == memberId);
         return "redirect:/members";
     }
@@ -45,11 +45,11 @@ public class MembersController {
         return "redirect:/addmember";
     }
 
-    @GetMapping("/member/{memberName}")
-    String getMember(@PathVariable String memberName, Model model){
+    @GetMapping("/member/{memberfname}")
+    String getMember(@PathVariable String memberfname, Model model){
          
         for (Members member : MembersController.members){
-            if(member.getfName().equals(memberName)) {
+            if(member.getfName().equals(memberfname)) {
                 model.addAttribute("member", new Members(member.getfName(), member.getlName(), member.getEmail(), member.getStad(), member.getId()));
                 return "member";
             }

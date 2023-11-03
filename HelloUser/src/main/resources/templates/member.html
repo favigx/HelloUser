@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/designStyle.css">
     <link rel="stylesheet" href="/memberInfoStyle.css">
     
-    <script src="adminScript.js" defer></script> 
+    <script src="/adminScript.js" defer></script> 
 </head>
 <body>
     <div>
@@ -30,7 +30,6 @@
         Efternamn: <span th:text="${member.lName}"></span><br/><br/>
         Email: <span th:text="${member.email}"></span><br/><br/>
         Stad: <span th:text="${member.stad}"></span><br/><br/>
-        Id: #<span th:text="${member.id}"></span><br/><br/>
         <a href="/members"><u>Tillbaka till alla medlemmar</u></a>
     </div>   
 </body>

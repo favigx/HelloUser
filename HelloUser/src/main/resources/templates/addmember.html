@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Member</title>
+    <title>Lägg till medlem</title>
     <link rel="stylesheet" href="headerStyle.css">
     <link rel="stylesheet" href="designStyle.css">
     <link rel="stylesheet" href="addmemberStyle.css">
@@ -26,7 +26,7 @@
     </div>
 
     <div class="addmember">
-        <form method="post" th:action="@{/addperson}" th:object="${newMember}">  
+        <form id="addForm" method="post" th:action="@{/addperson}" th:object="${newMember}">  
             Förnamn:</br/>
             <input type="text" id="fnameInput" th:field="*{fName}" required><br/><br/>
             Efternamn:</br/>
