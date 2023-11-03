@@ -54,9 +54,11 @@ function changeText(){
 
 function hideRemoveBtn(){
 
-    for (let i = 0; i < List.length; i++) {
+    for (let i = 0; i < List.length; ++i) {
+        let removeBtn = document.getElementById("removeBtn")
         removeBtn.remove();
     } 
+   
 }
 
 function hideAddmemberLink(){

@@ -41,9 +41,10 @@ public class MembersController {
 
     @PostMapping("/addperson")
     String newMember(@RequestParam("fName") String fName, @RequestParam("lName") String lName, @RequestParam("email") String email, @RequestParam("stad") String stad) {
-        members.add(new Members(fName, lName, email, stad, members.size() +1));
-        return "redirect:/addmember";
-    }
+        members.add(new Members(fName, lName, email, stad, members.size() +1*2));     // Jag valde att lägga till '*2' pågrund av ett problem med
+        return "redirect:/addmember";                                                 // ta-bort funktionen då 'id' i vissa fall blir lika som en existerande medlem,
+    }                                                                                 // vilket medför att båda med samma id tas bort när man väljer att ta bort en medlem. 
+                                                                                      // På det här sättet tror jag att jag har löst det problemet.
 
     @GetMapping("/member/{memberfname}")
     String getMember(@PathVariable String memberfname, Model model){
